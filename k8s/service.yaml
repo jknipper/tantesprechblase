@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hugo-app
+spec:
+  selector:
+    app: hugo-app
+  ports:
+    - protocol: TCP
+      port: 30000
+      targetPort: 30000
+      name: hugo-app

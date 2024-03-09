@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hugo-app
+  labels:
+    app: hugo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: hugo-app
+  template:
+    metadata:
+      labels:
+        app: hugo-app
+    spec:
+      containers:
+        - name: hugo-app
+          image: ghcr.io/polykit/tantesprechblase:v0.0.1
